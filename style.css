@@ -71,12 +71,12 @@ body {
   width: 24px;
   overflow: hidden;
   justify-content: flex-end;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease;
 }
 
 .commands-wrapper:hover {
-  transition: all 1s ease;
-  transition-delay: 1s;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
   width: 58px;
 }
 
@@ -89,9 +89,6 @@ body {
 }
 
 .checkmark {
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
   height: 20px;
   width: 20px;
   background-color: #eee;
