@@ -62,13 +62,6 @@ function addItemToList(field, list, itemsListNode) {
   if (inputValue) {
     postData(url, item, list, itemsListNode, insertItem);
     field.value = '';
-    // const item = {
-    //   value: inputValue,
-    //   isChecked: false
-    // };
-    // list.unshift(item);
-    // postData(url, item);
-    // field.value = '';
   }
 }
 
@@ -94,23 +87,18 @@ function renderList(list, itemsListNode) {
 
     checkItem.dataset.itemId = index;
     checkItem.type = 'checkbox';
-    // checkItem.addEventListener('click', () => {
-    //   toggleItemCheck(index);
-    //   renderList(list, itemsListNode);
-    // });
     if (item.isChecked) {
       checkItem.checked = true;
     }
     commandsWrapper.appendChild(checkItem);
 
-    // remove.innerHTML = 'Remove';
     remove.dataset.itemId = index;
     remove.addEventListener('click', () => {
       removeItemFromList(index);
       renderList(list, itemsListNode);
     });
     commandsWrapper.appendChild(remove);
-    // ------------------------
+
     const checkmark = document.createElement('span');
     checkmark.classList.add('checkmark');
     commandsWrapper.appendChild(checkmark);
@@ -118,7 +106,6 @@ function renderList(list, itemsListNode) {
       toggleItemCheck(index);
       renderList(list, itemsListNode);
     });
-    // ------------------------
   });
 
   persist(list);
